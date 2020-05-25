@@ -2,7 +2,7 @@ const { prefix } = require('../config');
 
 module.exports = async (client, message) => {
 
-    if (!message.guild) return;
+    if (!message.guild || message.author.bot) return;
     if (message.content.includes('bruh')) {
         return message.channel.send('bruh');
     }
