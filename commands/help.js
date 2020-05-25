@@ -21,7 +21,7 @@ exports.run = async (client, message, args) => {
         let cmdHelpEmbed = new RichEmbed()
             .setTitle(`${cmdHelp.name} Commands`)
             .setDescription(cmdHelp.description)
-            .addField('Usage', `\`${cmdHelp.usage}\``, true)
+            .addField('Usage', `\`${prefix + cmdHelp.usage}\``, true)
             .setColor(embedColor);
 
         if (cmdHelp.aliases.length) cmdHelpEmbed.addField('Aliases', `\`${cmdHelp.aliases.join(', ')}\``, true);

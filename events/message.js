@@ -3,6 +3,9 @@ const { prefix } = require('../config');
 module.exports = async (client, message) => {
 
     if (!message.guild) return;
+    if (message.content.includes('bruh')) {
+        return message.channel.send('bruh');
+    }
 
     const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
     const newPrefix = message.content.match(prefixMention) ? message.content.match(prefixMention)[0] : prefix;
