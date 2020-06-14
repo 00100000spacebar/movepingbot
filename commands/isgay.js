@@ -7,7 +7,7 @@ exports.run = async (client, message, args) => {
     if (!perms.has('EMBED_LINKS')) return noBotPerms(message, 'EMBED_LINKS');
 
     let user = message.mentions.members.first();
-    let gayness = user.id % 2 !== 0 ? 'This person is not gay' : 'This person is very gay';
+    let gayness = parseInt(user.id) % 2 === 0 ? 'This person is not gay' : 'This person is very gay';
 
     if (!user) return message.channel.send('You didn\'t provide me with a user to analyze!');
 
