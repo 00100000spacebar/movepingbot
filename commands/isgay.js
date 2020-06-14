@@ -15,7 +15,7 @@ exports.run = async (client, message, args) => {
         .setTitle('Gayness Profile')
         .addField('User', args[0], false)
         .addField('Gayness', gayness, false)
-        .setColor(color)
+        .setColor(embedColor)
         .setFooter('HmMmMmMmMmMmMm!')
         .setTimestamp();
     
