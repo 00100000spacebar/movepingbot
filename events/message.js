@@ -3,8 +3,12 @@ const { prefix } = require('../config');
 module.exports = async (client, message) => {
 
     if (!message.guild || message.author.bot) return;
+    // special cases
     if (message.content.includes('bruh')) {
         return message.channel.send('bruh');
+    }
+    if (message.author.id === '227558862180319234') {
+        return message.channel.send('who asked?');
     }
 
     const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
